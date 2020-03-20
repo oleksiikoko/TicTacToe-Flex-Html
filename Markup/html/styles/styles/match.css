@@ -1,0 +1,125 @@
+.avatar {
+  border-radius: 50%;
+}
+
+.container {
+  height: 100vh;
+  width: 100%;
+}
+
+.match {
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.match > div {
+  background-color: green;
+}
+
+.match__header {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.match__header > div {
+  max-height: 145px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 1% 2%;
+}
+
+.match__avatar {
+  max-height: 145px;
+}
+
+.match__avatar--active-me {
+  border: 4px solid #52be5d;
+}
+
+.match__avatar--active-opponent {
+  border: 4px solid #b95976;
+}
+
+.match__score {
+  text-align: center;
+  font-size: 28px;
+}
+
+.match .block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.match .block > div {
+  width: 25%;
+}
+
+.match .block > div:nth-child(2) {
+  width: 50%;
+}
+
+.match .block__game {
+  background: green;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.match .block__game__item {
+  width: 32%;
+  padding-bottom: 32%;
+  /* Same as width, sets height */
+  margin-bottom: 2%;
+  /* (100-32*3)/2 */
+  background-color: #a2cbfa;
+  border: 2px solid #4390e1;
+}
+
+.match .block__game__item div {
+  font-size: 100%;
+}
+
+.match .block__game__item div img {
+  max-height: 100px;
+}
+
+.match .block__chat {
+  background-color: red;
+}
+
+.match__timer {
+  font-size: 32px;
+  color: red;
+}
+/*# sourceMappingURL=match.css.map */

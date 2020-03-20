@@ -1,0 +1,135 @@
+@import "variables.scss";
+
+.container {
+  height: 100vh;
+}
+
+.profile {
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+
+  > div {
+    height: 100%;
+    display: flex;
+    min-height: 80%;
+    min-width: 40%;
+    justify-content: center;
+    align-items: center;
+  }
+  &__sidebar {
+    height: 80%;
+    width: 100%;
+    padding: 0 20px;
+    border-right: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    > div {
+      padding: 35px 0;
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  &__avatar {
+    max-height: 195px;
+  }
+
+  &__info {
+    p {
+      text-align: center;
+    }
+  }
+
+  &__name {
+    font-size: 26px;
+    font-weight: 600;
+  }
+
+  &__email {
+    font-weight: 500;
+  }
+  &__username {
+    font-weight: 500;
+  }
+
+  &__statistics {
+    margin-top: 45px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    p {
+      margin: 5px 0;
+      font-size: 22px;
+      font-weight: 500;
+    }
+  }
+
+  &__matches {
+    padding: 0 20px;
+    height: 80%;
+    width: 100%;
+    overflow: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    ul {
+      height: 100%;
+      width: 100%;
+      padding: 0;
+      list-style: none;
+    }
+    li {
+      display: flex;
+      margin: 20px 0;
+    }
+
+    .match {
+      display: flex;
+      justify-content: space-between;
+      min-width: 100%;
+      padding: 11px 20px;
+      border-radius: 20px;
+
+      &--win {
+        box-shadow: 0px 2px 1px -1px $green, 0px 1px 1px 0px $green,
+          0px 1px 3px 0px $green;
+      }
+
+      &--lose {
+        box-shadow: 0px 2px 1px -1px $red, 0px 1px 1px 0px $red,
+          0px 1px 3px 0px $red;
+      }
+    }
+  }
+}
+
+@media (max-width: 905px) {
+  .container {
+    height: 100%;
+  }
+  .profile {
+    display: block;
+
+    > div {
+      display: block;
+    }
+    &__sidebar {
+      height: auto;
+      border-right: none;
+    }
+
+    &__matches {
+      padding: 0 20px;
+      overflow: visible;
+      ul {
+        padding: 0;
+        list-style: none;
+      }
+      li {
+        margin: 20px 0;
+      }
+    }
+  }
+}
